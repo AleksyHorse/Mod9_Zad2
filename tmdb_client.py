@@ -1,8 +1,8 @@
 import requests
 import random
+import os
 
-
-api_token="eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3YjU0OGUyZDE4NTA3ZTBkN2FhYzcyZWJlMGFlMTBiZiIsInN1YiI6IjYyNmZlOGM1ZDEzMzI0MTEzZTJjODFiNiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.62L9nLRjTwwrgNq5pPcLrSJ8Pd3NaUEYcEPCYXidYpA"
+api_token=os.environ.get("TMDB_API_TOKEN", "")
 headers = {
         "Authorization": f"Bearer {api_token}"
     }
